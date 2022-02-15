@@ -1,0 +1,150 @@
+/* ブラウザがそれぞれ持っているCSSをリセットするための記述 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box {
+  width: auto;
+  height: 200px;
+  background-color: yellow;
+  margin: 50px;
+  padding: 10px;
+  display: flex; /*親に書く、子が並ぶ*/
+  justify-content: center; /*flexbox(子達)を真ん中へ*/
+}
+
+/*周りを黒で囲む /solid（子の方が上にくる）*/
+.box1 {
+  width: 100px;
+  height: 100px;
+  border: solid black 10px; 
+  background-color: whitesmoke;
+}
+/*周りを二十で囲む /double */
+.box2 {
+  width: 100px;
+  height: 100px;
+  border: double 30px green; 
+  background-color: whitesmoke;
+}
+/*周りを点線で囲む /dashed */
+.box3 {
+  width: 100px;
+  height: 100px;
+  border: dashed orange 5px; 
+  background-color: whitesmoke;
+}
+/*周りを点で囲む /dotted */
+.box4 {
+  width: 100px;
+  height: 100px;
+  border: dotted black 20px; 
+  background-color: whitesmoke;
+}
+/* 辺の幅を変更する*/
+.box5, .box6 { /*同じｃｓｓはカンマで区切る*/
+  width: 120px;
+  height: 120px;
+  background-color: lightgreen;
+  border: solid black;
+  border-top-width: 10px;
+  border-bottom-width: 1px;
+  border-right-width: 1px;
+  border-left-width: 0;
+}
+
+.line {
+  width: auto;
+  line-height: 50px; /*行の高さの中央に文字等がくる*/
+  background-color: orange;
+  opacity: 0.6;
+
+}
+
+.line-text {
+  text-align: center;
+}
+
+.nav-link-circle {
+  list-style-type: circle; /*行頭　白丸*/
+}
+
+.nav-link-square {
+  list-style-type: square; /*行頭　黒四角*/
+}
+
+.title {
+  font-size: 30px;
+}
+
+.title:before { /*前につける*/
+  content: "『";
+  color: red;
+}
+
+.title:after { /*後ろにつける*/
+  content: "』";
+  color: red;
+}
+
+.title2 {
+  font-size: 30px;
+  text-align: center;
+}
+
+.title2:after {
+  content: "sub main";
+  color: gray;
+  font-size: 15px;
+  display: block; /*二列にする*/
+}
+
+.title3 {
+  position: relative; /*親要素に書く*/
+  font-size: 20px;
+  background-color: rgb(248, 245, 245);
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+  border: double rgb(155, 142, 142) 1px;
+}
+
+.title3:before {
+  content: "ラベル";
+  font-size: 15px;
+  padding: 2px;
+  position: absolute; /*絶対配置にする、自分の好きなところにおける*/
+  top: -20px;
+  left: -10px;
+  border: solid black 1px;
+}
+
+.image {
+  background-image: url(img/star.jpg.png);
+  width: 50%;
+  line-height: 60px;
+  margin: 0px auto;
+  background-color:rgba(255,255,255,0.1);
+  background-blend-mode:lighten; /*背景のみ色を薄く*/
+}
+
+p {
+  text-align: center;
+  color: black;
+  font-weight: 900;
+}
+
+.radius {
+  width: 60px;
+  line-height: 50px;
+  font-weight: 900;
+  padding: 5px;
+  margin: 30px;
+  text-align: center;
+  background-color: pink;
+  border-radius: 30px; /*角を丸くする*/
+
+}
